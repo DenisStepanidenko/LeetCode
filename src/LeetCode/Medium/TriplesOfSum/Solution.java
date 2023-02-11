@@ -30,7 +30,7 @@ public class Solution {
                     }
                 }
             }
-            System.out.println("hhelo");
+
         }
         return answer;
     }
