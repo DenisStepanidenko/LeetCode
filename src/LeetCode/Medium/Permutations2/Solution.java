@@ -41,4 +41,8 @@ public class Solution {
         arr[i] = arr[i1];
         arr[i1] = tmp;
     }
+
+    public static void main(String[] args) {
+        
+    }
 }
