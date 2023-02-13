@@ -1,4 +1,4 @@
-package LeetCode.Medium.Permutations2;
+package LeetCode.Medium.PermutationsPartTwo;
 
 import java.util.ArrayList;
 import java.util.Arrays;
