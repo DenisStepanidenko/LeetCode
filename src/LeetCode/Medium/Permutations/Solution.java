@@ -20,11 +20,17 @@ public class Solution {
             answer.add(current);
         } else {
             for (int i = 0; i < n ; i++) {
+
                 myOwnPermute(nums, n - 1 , answer);
+
                 if (n % 2 == 0) {
-                    swap(nums, i, n - 1);
+
+                        swap(nums, i, n - 1);
+
                 } else {
-                    swap(nums, 0, n - 1);
+
+                        swap(nums, 0, n - 1);
+
                 }
             }
         }
