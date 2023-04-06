@@ -9,32 +9,28 @@ import java.util.stream.Collectors;
 
 
 public class Solution {
+    /*
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> answer = new ArrayList<>();
         return myOwnPermute(nums, nums.length , answer);
     }
 
-    public static List<List<Integer>> myOwnPermute(int[] nums, int n , List<List<Integer>> answer) {
-        if (n == 1) {
-            List<Integer> current = Arrays.stream(nums).boxed().toList();
-            answer.add(current);
+     */
+
+    public static void HipAlgorithm(int[] nums, int k) {
+        if (k == 1) {
+            System.out.println(Arrays.toString(nums));
         } else {
-            for (int i = 0; i < n ; i++) {
-
-                myOwnPermute(nums, n - 1 , answer);
-
-                if (n % 2 == 0) {
-
-                        swap(nums, i, n - 1);
-
+            for (int i = 0; i < k; i++) {
+                HipAlgorithm(nums, k - 1);
+                if (k % 2 == 0) {
+                    swap(nums, i, k - 1);
                 } else {
-
-                        swap(nums, 0, n - 1);
-
+                    swap(nums, 0, k - 1);
                 }
             }
         }
-        return answer;
+
     }
 
     public static void swap(int[] arr, int i, int i1) {
@@ -44,8 +40,11 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1,2,3};
-        System.out.println(permute(arr));
+        int[] arr = {1,2,3,6,9,10,11,12,13,14,15,16};
+        long start = System.currentTimeMillis();
+        HipAlgorithm(arr, arr.length);
+        long end = System.currentTimeMillis();
+        System.out.println((end - start)/1000.);
     }
 
 }
